@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../comun/css/stylebackground.css">
+	<link rel="shortcut icon" href="../../comun/img/iconos/icono_recoger.svg" type="image/x-icon">
+    <title>Recicla correctament!</title>
+</head>
+
+<body>
+    <h1 class="titulo">Recicla correctament!</h1>
+    <!-- Boton para volver -->
+    <div onclick="volver('../index.html')" id="volver">
+        <img src="img/arrow.png" id="flecha">
+    </div>
+
+    
+
+    <!-- Fondo -->
+    <main id="fondo">
+        <div class="circle cataleg"></div>
+        <div class="circle ajuda"></div>
+        <div class="circle explorador"></div>
+        <div class="circle tramits"></div>
+    </main>
+    <img src="img/tierra_color1.svg" class="tierra1 fondo">
+    <img src="img/tierra_color2.svg" class="tierra2 fondo">
+    <p id="score">Punts: 0</p>
+    <p id="timer">00:00</p>
+    <div class="juego" id="gamebox" onmouseenter="track(true)" onmouseleave="track(false)"></div>
+    <img id="contenedor" src="img/contenedor_amarillo.svg">
+    <div id="menu-inicial">
+        <h2>Atrapa el plàstic!</h2>
+        <div id="row1">
+            <img src="img/plastico2.svg" alt="Plastic" title="Plastic">
+            <p> = <span class="bien">+1</span></p>
+        </div>
+        <div id="row2">
+            <img src="img/vidrio1.svg" alt="Botella" title="Botella">
+            <p> = <span class="mal">-1</span></p>
+        </div>
+        <button onclick="comenzar()">Començar</button>
+    </div>
+    <div id="menu-timeOut">
+        <h2>Molt bé!</h2>
+        <p id="puntos-final">Has aconseguit: 0 punts</p>
+        <a href="">Tornar a jugar</a>
+    </div>
+    <script src="js/script.js"></script>
+	<script src="../../comun/js/javascript_volver.js"></script>
+</body>
+
+</html>

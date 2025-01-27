@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Parelles de famílies</title>
+    <link rel="stylesheet" href="../../comun/css/stylebackground.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="../../comun/img/iconos/icono_unir.svg" type="image/x-icon">
+    <script src="js/scrip.js"></script>
+    <script src="js/confeti.js"></script>
+    <script src="../../comun/js/javascript_volver.js"></script>
+</head>
+
+<body>
+    <!-- Boton para volver -->
+    <div onclick="volver('../index.html')" id="volver">
+        <img src="img/arrow.png" id="flecha">
+    </div>
+
+    <!-- Fondo -->
+    <main id="fondo">
+        <div class="circle cataleg"></div>
+        <div class="circle ajuda"></div>
+        <div class="circle explorador"></div>
+        <div class="circle tramits"></div>
+    </main>
+    <img src="../img/arbol_emoji.svg" class="arbol fondo">
+    <img src="../img/bombilla_emoji.svg" class="bombilla  fondo">
+    <h1 class="titulo">Arrossega cada residu al seu contenidor</h1>
+    <div id="wrong">T'has equivocat</div>
+    <div class="container">
+        <img class="img" id="img1" src="img/relacionar/carton.svg" draggable="true" ondragstart="drag(event)">
+        <img class="img" id="img2" src="img/relacionar/bolsa.svg" draggable="true" ondragstart="drag(event)">
+        <img class="img" id="img5" src="img/relacionar/botella1l_juego4.svg" draggable="true" ondragstart="drag(event)">
+        <img class="img" id="img3" src="img/relacionar/plastico-juego4.svg" draggable="true" ondragstart="drag(event)">
+        <img class="img" id="img4" src="img/relacionar/oganico.svg" draggable="true" ondragstart="drag(event)">
+        <div id="message">
+        Molt be!
+        </div>
+    </div>
+
+    <div class="container" style="border: none;">
+        <div class="title" ondragover="allowDrop(event)" ondrop="drop(event, 2)" id="pato"></div>
+        <div class="title" ondragover="allowDrop(event)" ondrop="drop(event, 3)" id="pinguino"></div>
+        <div class="title" ondragover="allowDrop(event)" ondrop="drop(event, 4)" id="gallina"></div>
+        <div class="title" ondragover="allowDrop(event)" ondrop="drop(event, 5)" id="leon"></div>
+        <div class="title" ondragover="allowDrop(event)" ondrop="drop(event, 1)" id="lobo"></div>
+    </div>
+</body>
+
+<!-- Confeti -->
+<canvas id="canvas" style="position: fixed;bottom: 0;"></canvas>
+
+</html>

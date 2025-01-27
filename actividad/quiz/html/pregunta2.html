@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quant saps sobre el reciclatge?</title>
+  <link rel="shortcut icon" href="../../../comun/img/iconos/test_1.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../../comun/css/stylebackground.css">
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <!-- Boton para volver -->
+  <div onclick="volver('../quiz_reciclaje.html')" id="volver">
+    <img src="../img/arrow.png" id="flecha">
+  </div>
+  <!-- Fondo -->
+  <main id="fondo">
+    <div class="circle cataleg"></div>
+    <div class="circle ajuda"></div>
+    <div class="circle explorador"></div>
+    <div class="circle tramits"></div>
+  </main>
+  <h1 class="titulo">Quant saps sobre el reciclatge?</h1>
+  <div class="quiz-container">
+    <div class="container">
+      <img src="../img/pregunta_2.jpg" id="image">
+      <div class="answers">
+        <h1 id="question-title">2- On s'han de tirar les piles quan acaba la seva vida útil?</h1>
+        <button class="answer-button" onclick="checkAnswer(this, true)">a) Punt net, punts de recollida als carrers i en algunes botigues</button>
+        <button class="answer-button" onclick="checkAnswer(this, false)">b) Al contenidor gris, amb la fracció resto</button>
+        <button class="answer-button" onclick="checkAnswer(this, false)">c) Piles? Ni idea!</button>
+      </div>
+    </div>
+    <img src="../img/tierra_color2.svg" alt="Astronaut" id="astronauta" />
+    <button id="nextbutton" class="nextbutton" onclick="nextQuestion('pregunta3.html')" disabled>Següent</button>
+  </div>
+  <script src="../js/pregunta.js"></script>
+  <script src="../../../comun/js/javascript_volver.js"></script>
+</body>
+</html>

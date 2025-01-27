@@ -1,0 +1,200 @@
+body {
+  background-color: var(--background-color);
+}
+
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
+.big_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.imagen_playa {
+  width:1000px;
+  border-radius: 25px;
+  border: solid #b5b099 5px;
+  margin-top: -70px;
+  height: 519px;
+}
+
+.imagen {
+  --tamano: 120px;
+  width: var(--tamano);
+  height: var(--tamano);
+  border-radius: 25px;
+  border: solid #b5b099 5px;
+  background-color: white;
+}
+
+.items_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin-left: 80px;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto_objeto {
+  max-width: 210px;
+}
+
+p {
+  font-size: 42px;
+  margin-left: 15px;
+  width: 200px;
+}
+
+/* Estilos para el mensaje */
+.mensaje {
+  z-index: 99;
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  background-color: var(--green-color);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-size: 54px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: mostrar-mensaje 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes mostrar-mensaje {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ocultar-mensaje {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* Estilos para el mensaje final*/
+.mensaje_final {
+  z-index: 99;
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  background-color: var(--green-color);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-size: 84px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: mostrar-mensaje 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes mostrar-mensaje {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Puntos clickables */
+div[id^="point"] {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+/* estilo para los objetos encontrados */
+.pointfound {
+  border: solid 5px #83d891;
+  pointer-events: none;
+}
+/* posiciones de las areas clicables de cada objeto */
+#point1 {
+  top: 630px;
+  right: 1180px;
+}
+
+#point2 {
+  top: 600px;
+  left: 1165px;
+}
+
+#point3 {
+  top: 620px;
+  left: 978px;
+}
+
+#point4 {
+  top: 543px;
+  left: 590px;
+}
+
+#point5 {
+  top:445px;
+  right: 800px;
+}
+
+#point6 {
+  top: 540px;
+  right: 955px;
+}
+
+#point7 {
+  top: 490px;
+  right: 1383px;
+}
+
+#point8 {
+  top: 430px;
+  left: 450px;
+}
+
+canvas {
+  pointer-events: none;
+}
+canvas#canvas {
+  position: fixed;
+  bottom: 0;
+}
+/* DESCOMENTAR PARA PODER VER LOS PUNTOS DÓNDE DEBE HACER CLICK */
+/* div[id^="point"] {
+    background-color: red;
+    border: 5px solid red;
+} */

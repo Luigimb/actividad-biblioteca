@@ -1,0 +1,80 @@
+#contenedor_principal {
+  max-width: 1400px;
+}
+
+.fondo {
+  position: absolute;
+  z-index: -10;
+}
+
+.reciclaje {
+  width: 250px;
+  top: 150px;
+  left: 125px;
+  transform: rotate(-14deg);
+  animation: girar 12s linear infinite;
+  /* animation-name: girar;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out; */
+}
+
+.contenedor {
+  width: 170px;
+  bottom: 50px;
+  right: 650px;
+  transform: rotate(-14deg);
+  animation-name: pulse;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.energia {
+  width: 220px;
+  top: 1px;
+  right: 200px;
+  animation-name: dance;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

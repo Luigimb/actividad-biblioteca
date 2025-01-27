@@ -1,0 +1,188 @@
+:root {
+  --marron1: #D1CFC3;
+  --marron2: #B5B19A;
+  --marron3: #615F52;
+  --tamano: 230px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Varela Round", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 350px;
+  user-select: none;
+}
+
+.container img {
+  width: var(--tamano);
+  height: var(--tamano);
+  cursor: pointer;
+  object-fit: contain;
+  background-color: var(--marron1);
+  border: 5px solid var(--marron2);
+  border-radius: 20px;
+}
+.titulo {
+  font-size: 70px;
+}
+
+.title {
+  display: inline-block;
+  width: var(--tamano);
+  height: var(--tamano);
+  margin: 10px;
+  padding: 10px;
+  color: var(--marron3);
+  background-color: var(--marron1);
+  border: 5px solid var(--marron2);
+  border-radius: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reset {
+  margin: 10px;
+  width: 100px;
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  color: white;
+  background-color: black;
+}
+
+#message {
+  padding: 20px;
+  display: none;
+  background-color: var(--green-color);
+  border-radius: 25px;
+  color: white;
+  font-size: 85px;
+  width: 1000px;
+  text-align: center;
+}
+#wrong {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--red-color);
+  color: white;
+  font-size: 100px;
+  padding: 30px;
+  display: none;
+  border-radius: 25px;
+  text-align: center;
+}
+
+canvas {
+  pointer-events: none;
+}
+
+#pato {
+  background-image: url('../img/relacionar/contenedor_gris.svg');
+  background-size: 100%;
+  background-position: 50%;
+  
+}
+
+
+#pinguino {
+  background-image: url('../img/relacionar/contenedor_amarillo.svg');
+  background-size: 100%;
+  background-position: 50%;
+  
+}
+
+
+#gallina {
+  background-image: url('../img/relacionar/contenedor_marron.svg');
+    background-size: 100%;
+  background-position: 50%;
+  
+}
+
+
+#leon {
+  background-image: url('../img/relacionar/contenedor_verde.svg');
+    background-size: 100%;
+  background-position: 50%;
+  
+}
+
+
+#lobo {
+  background-image: url('../img/relacionar/contenedor_azul.svg');
+   background-size: 100%;
+  background-position: 50%;
+  
+
+}
+.fondo {
+	position: absolute;
+	z-index: -10;
+}
+
+  .arbol {
+    width: 200px;
+    bottom: 250px;
+    left: 250px;
+    transform: rotate(-14deg);
+    animation-name: pulse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+  .bombilla {
+    width: 200px;
+    top: 160px;
+    right: 270px;
+    animation-name: dance;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes dance {
+    0% {
+      transform: rotate(10deg);
+    }
+
+    50% {
+      transform: rotate(-10deg);
+    }
+  
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }

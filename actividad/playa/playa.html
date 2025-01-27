@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Troba els objectes</title>
+        <link rel="shortcut icon" href="../../comun/img/iconos/icono_playa-1.svg" type="image/x-icon">
+        <link rel="stylesheet" href="../../comun/css/stylebackground.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- Boton para volver -->
+        <div onclick="volver('../index.html')" id="volver">
+            <img src="img/arrow.png" id="flecha">
+        </div>
+
+        <!-- Fondo -->
+        <main id="fondo">
+            <div class="circle cataleg"></div>
+            <div class="circle ajuda"></div>
+            <div class="circle explorador"></div>
+            <div class="circle tramits"></div>
+        </main>
+        <h1 class="titulo">Troba els objectes</h1>
+        <div id="mensaje" class="mensaje"></div>
+        <div id="mensaje_final" class="mensaje_final"></div>
+        <div class="big_box">
+            <div>
+                <img src="img/playa1.jpg" class="imagen_playa">
+            </div>
+            <div class="items_container">
+                <div class="text">
+                    <div id="item1" class="objeto"><img src="img/plastico-1.svg" id="objeto1" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto1">Ampolla de plàstic</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item2" class="objeto"><img src="img/plastico-2.svg" id="objeto2" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto2">Bossa de plàstic</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item3" class="objeto"><img src="img/plastico-3.svg" id="objeto3" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto3">Ampolla de plàstic</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item4" class="objeto"><img src="img/plastico4.svg" id="objeto4" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto4">Palleta</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item5" class="objeto"><img src="img/carton.svg" id="objeto5" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto5">Bossa de paper</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item6" class="objeto"><img src="img/papel.svg" id="objeto6" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto6">Periòdic</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item7" class="objeto"><img src="img/botella1l.svg" id="objeto7" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto7">Ampolla de vidre</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div id="item8" class="objeto"><img src="img/bolsa.svg" id="objeto8" class="imagen"></div>
+                    <div class="texto_objeto">
+                        <p id="texto8">Bossa d'escombraries</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="click_container">
+            <div id="point1" onclick="point(1)"></div>
+            <div id="point2" onclick="point(2)"></div>
+            <div id="point3" onclick="point(3)"></div>
+            <div id="point4" onclick="point(4)"></div>
+            <div id="point5" onclick="point(5)"></div>
+            <div id="point6" onclick="point(6)"></div>
+            <div id="point7" onclick="point(7)"></div>
+            <div id="point8" onclick="point(8)"></div>
+        </div>
+
+        <!-- Confeti -->
+        <canvas id="canvas"></canvas>
+        <script src="js/confeti.js"></script>
+        <script src="js/script.js"></script>
+        <script src="../../comun/js/javascript_volver.js"></script>
+    </body>
+
+</html>

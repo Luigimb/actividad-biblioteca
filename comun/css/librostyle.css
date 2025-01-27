@@ -1,0 +1,157 @@
+/* Variables colores */
+:root {
+    --colorArrow:#d44949;
+    --background-caja:#e9e7db;
+}
+/* End variables colores */
+
+/* resets y border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fin resets */
+
+html {
+    background:var(--background-caja);
+    scroll-behavior: smooth;
+}
+
+/* Start formato de imaganes */
+.caja {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.caja img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    animation: fadeImg 0.8s;
+}
+
+/* BOTÓN VOLVER */
+#volver {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+
+    background-color: transparent;
+    border: none;
+    appearance: none;
+	z-index: 100;
+   
+    cursor: pointer;
+    
+    transition: 0.08s;
+}
+
+#volver svg {
+    width: 4rem;
+}
+
+#volver:hover {
+    transform: scale(1.1);
+
+    transition: 0.08s;
+}
+.act-btn {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    width: 150px;
+    background-image: url(../img/Pattern.png);
+    background-size: 100%;
+    padding: 10px;
+}
+.act-btn:hover {
+    transform: scale(1.1);
+}
+.act-btn:active {
+    filter: brightness(1.1);
+}
+.act-btn img {
+    display: block;
+    width: 100%;
+}
+
+@supports (object-fit: contain) { 
+        .caja img{
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;	
+    }
+}
+/* End formato de imaganes */
+
+/* Start slider */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1280px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    position: absolute;
+    cursor: pointer;
+    top: 0%;
+    width: 49.9%;
+    height: 100%;
+    padding: 16px;
+    color: transparent;
+    font-weight: bold;
+    font-size: 55px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Next & previous buttons active */
+.prev:hover {
+    color:var(--colorArrow);
+    transform: translate(-100px);
+    transition: 0.3s;
+}
+.next:hover {
+    color:var(--colorArrow);
+    transform: translate(100px);
+    transition: 0.3s;
+}
+
+/* Next & previous buttons POSITION */
+#arrow-prev {
+    position: relative;
+    top: 50%;
+    left: 45%;
+}
+
+#arrow-next {
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+/* End slider */
+
+
+/* transicion imagenes */
+@keyframes fadeImg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* End transicion imagenes */
